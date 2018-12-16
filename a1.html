@@ -1,0 +1,32 @@
+<html>
+<head>
+<script type="text/javascript">
+
+	function MultiplyBy(){
+		num1 = parseInt(document.getElementById("first").value);
+		num2 = parseInt(document.getElementById("second").value);
+		document.getElementById("result").innerHTML = num1 * num2;
+	}
+
+	function AddBy(){
+		num1 = parseInt(document.getElementById("first").value);
+		num2 = parseInt(document.getElementById("second").value);
+		document.getElementById("result").innerHTML = num1 + num2;
+	}
+</script>
+</head>
+
+
+<body>
+	<form>
+		First number: <input type="text" id="first">
+		Second number: <input type="text" id="second">
+		<input type="button" onClick="MultiplyBy()" value="Multiply">
+		<input type="button" onClick="AddBy()" value="Add">
+	</form>
+
+	<p id="result">The result is: </p>
+		
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<html>
+<head>
+<script>
+
+	function Show(){
+		document.getElementById("img").style.visibility="visible"
+	}
+
+	function Noshow(){
+		document.getElementById("img").style.visibility="hidden"
+	}
+
+</script>
+
+</head>
+
+<body>
+	<h1 id="pizza" onmouseover="Show()" onmouseout="Noshow()"> PIZZA </h1>
+	<br>
+	<img style="visibility:hidden" src="https://www.cicis.com/media/1176/pizza_trad_pepperonibeef.png" id="img" height="100" width="100"></img>
+
+
+
+	Add more: <input type="text" id="input">
+	<button onclick="add()" value="Add"></button>
+	<p>Pizza Variety:</p>
+	<p id="here"> </p>
+
+
+	<script>
+	var variety = ['Mexican']
+	document.getElementById("here").innerHTML=variety;
+
+	function add(){
+		value=document.getElementById("input").value;
+		variety.push(value);
+		document.getElementById("here").innerHTML=variety;
+	}
+	</script>
+
+
+</body>
+</html>

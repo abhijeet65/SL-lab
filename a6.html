@@ -1,0 +1,52 @@
+<html>
+<head>
+<script>
+
+  function Order(){
+    var cakeQuantity = document.getElementById("cakeQuantity").value;
+    var cookieQuantity = document.getElementById("cookieQuantity").value;
+    var cakeSelected = document.getElementById("cake").checked;
+    var cookieSelected = document.getElementById("cookies").checked;
+
+    if(cakeSelected && cakeQuantity){
+      alert("Bill: $" + parseInt(cakeQuantity)*10)
+    }
+
+    if(cookieSelected && cookieQuantity){
+      alert("Bill: $" + parseInt(cookieQuantity)*5)
+    }
+
+    if(!cookieSelected && !cookieQuantity){
+      alert("Please take something. It's christmas.")
+    }
+    
+  }
+
+
+</script>
+</head>
+
+<body>
+  <img src="https://i.ytimg.com/vi/rq-aqxz2T9c/maxresdefault.jpg" width="150" height="150"><br>
+
+  <input type="radio" id="cake" name="bakery">
+  Cake($10)<br>
+  Quantity<input type="number" id="cakeQuantity">
+
+  <br>
+  <br>
+
+
+
+  <img src="https://i.pinimg.com/originals/07/cc/15/07cc15abefde855816c57cc3bf4b4666.jpg" width="150" height="150"><br>
+
+  <input type="radio" id="cookies" name="bakery">
+  Cookies($5)<br>
+  Quantity<input type="number" id="cookieQuantity">
+
+  <br><br><br>
+
+  <input type="submit" onclick="Order()" value="Order Now!">
+</body>
+
+</html>
